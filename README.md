@@ -63,11 +63,12 @@ nazov_premennej NUMBER [(precision, scale)]
 ```
   
 Ak zadáme precision a scale, premenná bude číslo s pevnou desatinnou čiarkou.  
-Precision je  celkový počet signifikantných číslic v rozmedzí 1 až 38. Scale je počet číslic za desatinnou čiarkou  (ak je kladné) alebo pred ňou (záporné scale).   
-Rozmedzie scale je -84 až 127. 
-Hodnoty, ktoré  presnosťou presahujú scale premennej do ktorej majú byť vložené, budú implicitne zaokrúhlené. Ak nezadáme precision ani scale, premenná bude číslo s pohyblivou desatinnou čiarkou s dĺžkou  maximálne 40 číslic.  
+Precision je  celkový počet signifikantných číslic v rozmedzí 1 až 38. 
+Scale je počet číslic za desatinnou čiarkou  (ak je kladné) alebo pred ňou (záporné scale).    
+Rozmedzie scale je -84 až 127.  
+Hodnoty, ktoré presnosťou presahujú scale premennej, do ktorej majú byť vložené, budú implicitne zaokrúhlené. Ak nezadáme precision ani scale, premenná bude číslo s pohyblivou desatinnou čiarkou s dĺžkou  maximálne 40 číslic.  
 
-**BINARY_FLOAT** a **BINARY_DOUBLE** sa používajú pre čísla s pohyblivou desatinnou čiarkou a  jednoduchou alebo dvojitou presnosťou podľa normy IEEE-754.   
+**BINARY_FLOAT** a **BINARY_DOUBLE** sa používajú pre čísla s pohyblivou desatinnou čiarkou a jednoduchou alebo dvojitou presnosťou podľa normy IEEE-754.   
 BINARY_FLOAT zaberá 4 byty a ukladá čísla od 1,17549435E-38F do 3,40282347E+38F.  
 BINARY_DOUBLE zaberie 8 bytov a spracuje čísla od 2,2250748585072014E-308 do 1,7976931348623157E+308.  
 
@@ -79,6 +80,22 @@ Hodnoty sú reprezentované natívnym integer formátom príslušnej hardvérove
 
 **SIMPLE_INTEGER** (od ver. 11g) je rýchlejšia alternatíva PLS_INTEGER, nepodporuje však NULL hodnoty a nekontroluje podmienky pretečenia. 
 
-
+### 📅 Dátumové Dátové Typy
+**DATE** ukladá datum a čas s presnosťou na sekundy.  
+```sql
+nazov_premennej DATE 
+```
+**TIMESTAMP** ukladá datum a čas s presnosťou až na miliardtinu sekundy (9 miest, defaultne 6). 
+```sql
+nazov_premennej TIMESTAMP [(precision)]
+```
+**TIMESTAMP WITH TIMEZONE** ukladá datum a čas ako TIMESTAMP, navyše však ukladá  informáciu o časovej zóne 
+```sql
+nazov_premennej TIMESTAMP [(precision)] WITH TIME ZONE
+```
+**TIMESTAMP WITH LOCAL TIMEZONE** ako TIMESTAMP, je však citlivý na rozdiely medzi  SESSION_TIMEZONE a DB_TIMEZONE. Informácie sa pri ukladaní na server prepočítavajú a uložia  v časovej zone databázy, naopak pri výbere sa prerátajú na časovú zónu session. 
+```sql
+nazov_premennej TIMESTAMP [(precision)] WITH LOCAL TIME ZONE
+```
 
 
