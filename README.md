@@ -61,7 +61,8 @@ NUMBER je najpoužívanejší číselný dátový typ, ukladá decimálne hodnot
 ``sql
 nazov_premennej NUMBER [(precision, scale)] 
 ``
-Ak zadáme precision a scale, premenná bude číslo s pevnou desatinnou čiarkou. 
+  
+Ak zadáme precision a scale, premenná bude číslo s pevnou desatinnou čiarkou.  
 Precision je  celkový počet signifikantných číslic v rozmedzí 1 až 38. Scale je počet číslic za desatinnou čiarkou  (ak je kladné) alebo pred ňou (záporné scale).   
 Rozmedzie scale je -84 až 127. 
 Hodnoty, ktoré  presnosťou presahujú scale premennej do ktorej majú byť vložené, budú implicitne zaokrúhlené. Ak nezadáme precision ani scale, premenná bude číslo s pohyblivou desatinnou čiarkou s dĺžkou  maximálne 40 číslic.  
