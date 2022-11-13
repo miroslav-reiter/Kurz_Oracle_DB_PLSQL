@@ -36,8 +36,8 @@ C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html
 https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html
 
-## Dátové Typy
-### Znakové Dátové Typy
+## 📦 Dátové Typy
+### 🎰 Znakové Dátové Typy
 **VARCHAR2** uchováva reťazce s premenlivou dĺžkou. Pri deklarácii premennej treba zadať jej maximálnu dĺžku (1 – 32 767 bytov).   
 Dĺžku je možné zadať aj počtom znakov, vtedy sa potrebnýpočet bytov preráta podľa najvačšej dĺžky ktorú znaková sada databázy využíva pre nejaký znak.  
 Napr. pre UTF8 je to 3, t.j. 100 CHAR = 300 BYTE  
@@ -55,7 +55,7 @@ Ak sú hodnoty v premennej CHAR menšie ako jej dĺžka, doplnia sa do  tejto d�
 
 **NCHAR** unicode obdoba CHAR  
 
-### Číselné Dátové Typy
+### 🎱 Číselné Dátové Typy (Reálne)
 NUMBER je najpoužívanejší číselný dátový typ, ukladá decimálne hodnoty od 10^-130 do 10^126-1 
 ``sql
 nazov_premennej NUMBER [(precision, scale)] 
@@ -70,5 +70,13 @@ BINARY_FLOAT zaberá 4 byty a ukladá čísla od 1,17549435E-38F do 3,40282347E+
 BINARY_DOUBLE zaberie 8 bytov a spracuje čísla od 2,2250748585072014E-308 do 1,7976931348623157E+308.  
 
 **SIMPLE_FLOAT** a **SIMPLE_DOUBLE** (od ver. 11g) je ich rýchlejšia alternatíva, ktorá ale nepodporuje NULL hodnoty, predikáty **IS NAN** a **IS INFINITY** a nekontroluje podmienkypretečenia
+
+### 🎲 Číselné Dátové Typy (Celé)
+**PLS_INTEGER** ukladá celočíselné hodnoty (signed integer) od −2 147 483 648 do 2 147 483 647.  
+Hodnoty sú reprezentované natívnym integer formátom príslušnej hardvérovej platformy, celočíselné výpočty sa tak vykonávajú rýchlejšie ako pri dátovom type NUMBER. PLS_INTEGER je náhradou a ekvivalentom staršieho typu BINARY_INTEGER.  
+
+**SIMPLE_INTEGER** (od ver. 11g) je rýchlejšia alternatíva PLS_INTEGER, nepodporuje však NULL hodnoty a nekontroluje podmienky pretečenia. 
+
+
 
 
