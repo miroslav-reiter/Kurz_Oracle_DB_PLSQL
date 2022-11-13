@@ -56,7 +56,8 @@ Ak sú hodnoty v premennej CHAR menšie ako jej dĺžka, doplnia sa do  tejto d�
 **NCHAR** unicode obdoba CHAR  
 
 ### 🎱 Číselné Dátové Typy (Reálne)
-NUMBER je najpoužívanejší číselný dátový typ, ukladá decimálne hodnoty od 10^-130 do 10^126-1 
+NUMBER je najpoužívanejší číselný dátový typ, ukladá decimálne hodnoty od 10^-130 do 10^126-1  
+
 ``sql
 nazov_premennej NUMBER [(precision, scale)] 
 ``
