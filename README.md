@@ -35,3 +35,23 @@ C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 ## 📔 Dokumentácia
 https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html
 https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html
+
+## Dátové Typy
+### Znakové Dátové Typy
+**VARCHAR2** uchováva reťazce s premenlivou dĺžkou. Pri deklarácii premennej treba zadať jej maximálnu dĺžku (1 – 32 767 bytov). 
+Dĺžku je možné zadať aj počtom znakov, vtedy sa potrebnýpočet bytov preráta podľa najvačšej dĺžky ktorú znaková sada databázy využíva pre nejaký znak.  
+Napr. pre UTF8 je to 3, t.j. 100 CHAR = 300 BYTE
+``plsql 
+nazov_premennej VARCHAR2(max_dlzka [BYTE|CHAR] 
+``
+
+**CHAR** pre reťazce pevnej dĺžky, táto sa zadáva pri deklarácii obdobne ako pri VARCHAR2    
+V rozmedzí 1-­‐32 767 bytov alebo korešpondujúci počet znakov. 
+Ak sa nezadá dĺžka, premenná  bude dlhá 1 znak, ak sa nezadá CHAR alebo BYTE, určí sa to z hodnoty inicializačnej premennej NLS_LENGTH_SEMANTICS. 
+Ak sú hodnoty v premennej CHAR menšie ako jej dĺžka, doplnia sa do  tejto dĺžky automaticky medzerami sprava. 
+
+**NVARCHAR2** unicode obdoba VARCHAR2, uchováva premenné v znakovej sade definovanej parametrom NLS_NCHAR_CHARACTERSET t.j. UTF-8 alebo UTF-16 
+**NCHAR** unicode obdoba CHAR
+
+
+
