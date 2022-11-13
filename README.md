@@ -42,9 +42,9 @@ https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html
 Dĺžku je možné zadať aj počtom znakov, vtedy sa potrebnýpočet bytov preráta podľa najvačšej dĺžky ktorú znaková sada databázy využíva pre nejaký znak.  
 Napr. pre UTF8 je to 3, t.j. 100 CHAR = 300 BYTE  
 
-``sql 
+```sql 
 nazov_premennej VARCHAR2(max_dlzka [BYTE|CHAR]) 
-``
+```
 
 **CHAR** pre reťazce pevnej dĺžky, táto sa zadáva pri deklarácii obdobne ako pri VARCHAR2  
 V rozmedzí 1‐32 767 bytov alebo korešpondujúci počet znakov.  
@@ -58,9 +58,9 @@ Ak sú hodnoty v premennej CHAR menšie ako jej dĺžka, doplnia sa do  tejto d�
 ### 🎱 Číselné Dátové Typy (Reálne)
 NUMBER je najpoužívanejší číselný dátový typ, ukladá decimálne hodnoty od 10^-130 do 10^126-1  
 
-``sql
+```sql
 nazov_premennej NUMBER [(precision, scale)] 
-``
+```
   
 Ak zadáme precision a scale, premenná bude číslo s pevnou desatinnou čiarkou.  
 Precision je  celkový počet signifikantných číslic v rozmedzí 1 až 38. Scale je počet číslic za desatinnou čiarkou  (ak je kladné) alebo pred ňou (záporné scale).   
