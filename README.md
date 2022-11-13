@@ -99,19 +99,19 @@ nazov_premennej TIMESTAMP [(precision)] WITH LOCAL TIME ZONE
 ```
 
 ### ⏳ Intervalové Dátové Typy
-**INTERVAL YEAR TO MONTH** umožňuje ukladať časové úseky ako počet rokov a mesiacov 
+**INTERVAL YEAR TO MONTH** umožňuje ukladať časové úseky ako počet rokov a mesiacov   
 **INTERVAL DAY TO SECOND** použijeme pre časové úseky zadané ako počet dní, hodín, minút a sekúnd (vrátane zlomkov sekúnd) 
 
 ### ✅ Ďalšie Dátové Typy
-**BOOLEAN** môže nadobúdať 3 hodnoty – TRUE, FALSE a NULL 
-**ROWID** slúži pre ukladanie fyzickej adresy riadka v tabuľke 
-**UROWID** pre logickú adresu riadka v index organized tabuľke 
-**REF CURSOR** a **SYS_REFCURSOR** pre kurzorové premenné používané so statickým, alebo dynamickým SQL
+**BOOLEAN** môže nadobúdať 3 hodnoty – TRUE, FALSE a NULL   
+**ROWID** slúži pre ukladanie fyzickej adresy riadka v tabuľke    
+**UROWID** pre logickú adresu riadka v index organized tabuľke   
+**REF CURSOR** a **SYS_REFCURSOR** pre kurzorové premenné používané so statickým, alebo dynamickým SQL  
 
 ### ⬛ LOB (Large Objects) Dátové Typy
-**CLOB** (Character Large Object) pre deklaráciu premennej, ktorá predstavuje LOB locator – odkaz na blok veľkého textu v databáze 
-**NCLOB** odkaz na blok veľkého unicode textu v databáze 
-**BLOB** odkaz na veľký binárny objekt uložený v databáze 
-**BFILE** odkaz na veľký binárny objekt uložený mimo databázy
+**CLOB** (Character Large Object) pre deklaráciu premennej, ktorá predstavuje LOB locator – odkaz na blok veľkého textu v databáze   
+**NCLOB** odkaz na blok veľkého unicode textu v databáze   
+**BLOB** odkaz na veľký binárny objekt uložený v databáze   
+**BFILE** odkaz na veľký binárny objekt uložený mimo databázy  
 
 
