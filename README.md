@@ -1,14 +1,14 @@
 # 📋 Kurz_Oracle_DB_PLSQL
-Materiály ku kurzu Oracle DB PL/SQL
+Materiály ku kurzu Oracle DB PL/SQL  
 
 ## 🧱 Testovacia Oracle DB 
-Prihlasovacie údaje na kurze od lektora  
-DB Name: KurzOraclePLSQL  
-Password: Oracle-je-super-2022  
+Prihlasovacie údaje na kurze od lektora    
+DB Name: KurzOraclePLSQL    
+Password: Oracle-je-super-2022    
 
-Database name: F861DMQMREFDG3ZG
-Wallet: IT-academy-456...
-ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a
+Database name: F861DMQMREFDG3ZG  
+Wallet: IT-academy-456...  
+ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a  
 
 ## 📁 Súbory na kurze od lektora  
 Registrujte sa na a vytvorte si konto na: https://livesql.oracle.com
