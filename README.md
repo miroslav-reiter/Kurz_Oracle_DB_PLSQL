@@ -20,13 +20,13 @@ Hostname: localhost alebo 127.0.0.1
 Port: 1521  
 SID: xe  
 
-## 📁 Súbory na kurze od lektora  
+## 📁 Súbory a materiály na kurze od lektora  
 Registrujte sa na a vytvorte si **Oracle konto** pre používanie [Oracle Live SQL editora](https://livesql.oracle.com)
 Kto si bude chcieť okrem simulátorov vyskúšaj aj vlastné databázy a nad nimi písanie skriptov, nainštalujte si:
 1. [Oracle XE Express (free Database)](https://www.oracle.com/database/technologies/appdev/xe.html) 
 2. [SQL Developer](https://www.oracle.com/database/sqldeveloper/)  
  
-**Materiály** sú dostupné na [Microsoft OneDrive/Sharepoint](https://vitask-my.sharepoint.com/:f:/g/personal/miroslav_vitask_onmicrosoft_com/ErD-ruCODExDnWXA1heKXhABKiTSIi4BC90Bw7QUow17vg?e=j3MsER)
+**Materiály** sú dostupné na: [Microsoft OneDrive/Sharepoint](https://vitask-my.sharepoint.com/:f:/g/personal/miroslav_vitask_onmicrosoft_com/ErD-ruCODExDnWXA1heKXhABKiTSIi4BC90Bw7QUow17vg?e=j3MsER)
 
 ## 🧰 Stránky a nástroje na precvičovanie Oracle DB a PL/SQL
 1. [SQLzoo](https://sqlzoo.net/wiki/SQL_Tutorial)  
