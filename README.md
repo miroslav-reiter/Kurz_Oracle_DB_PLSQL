@@ -349,7 +349,7 @@ book2 books;
 ```
 
 ### Pristupovanie k dátam (Používateľom definované záznamy)
-```sql
+```slq
 DECLARE 
    type books is record 
       (title varchar(50), 
