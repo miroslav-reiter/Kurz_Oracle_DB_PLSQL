@@ -275,6 +275,14 @@ from   log_table
 
 Record je skupina dátových položiek uložená v poliach, každé má svoje meno a datatype. Atribút %ROWTYPE dovoľuje deklarovať recordy, ktoré zodpovedajú riadku databázovej tabuľky. Avšak tak nemôžete určiť datatypy políčok recordu, alebo ich sami definovať. Takýto record je presný obraz datatypu databázovej tabuľky. Preto existuje datatype RECORD, ktorý toto obmedzenie ruší.
 
+PL/SQL dokáže spracovať nasledujúce 3 typy záznamov:
+1. Table-based (Na základe tabuľky)
+2. Cursor-based records (Záznamy založené na kurzore)
+3. User-defined records (Používateľsky definované záznamy)
+
+### Table-Based Records
+Atribút %ROWTYPE umožňuje programátorovi vytvárať záznamy založené na tabuľkách a kurzoroch.
+
 ```sql
 DECLARE 
    customer_rec customers%rowtype; 
@@ -290,3 +298,78 @@ END;
 /
 ```
 
+### Cursor-based records (Záznamy založené na kurzore)
+DECLARE 
+   CURSOR customer_cur is 
+      SELECT id, name, address  
+      FROM customers; 
+   customer_rec customer_cur%rowtype; 
+BEGIN 
+   OPEN customer_cur; 
+   LOOP 
+      FETCH customer_cur into customer_rec; 
+      EXIT WHEN customer_cur%notfound; 
+      DBMS_OUTPUT.put_line(customer_rec.id || ' ' || customer_rec.name); 
+   END LOOP; 
+END; 
+/
+
+### Používateľom definované záznamy
+PL/SQL poskytuje používateľom definovaný typ záznamu, ktorý vám umožňuje definovať rôzne štruktúry záznamov. Tieto záznamy pozostávajú z rôznych polí.
+```sql
+TYPE 
+type_name IS RECORD 
+  ( field_name1  datatype1  [NOT NULL]  [:= DEFAULT EXPRESSION], 
+   field_name2   datatype2   [NOT NULL]  [:= DEFAULT EXPRESSION], 
+   ... 
+   field_nameN  datatypeN  [NOT NULL]  [:= DEFAULT EXPRESSION); 
+record-name  type_name;
+```
+
+```sql
+DECLARE 
+TYPE books IS RECORD 
+(title  varchar(50), 
+   author  varchar(50), 
+   subject varchar(100), 
+   book_id   number); 
+book1 books; 
+book2 books; 
+```
+
+### Pristupovanie k dátam (Používateľom definované záznamy)
+```sql
+DECLARE 
+   type books is record 
+      (title varchar(50), 
+      author varchar(50), 
+      subject varchar(100), 
+      book_id number); 
+   book1 books; 
+   book2 books; 
+BEGIN 
+   -- Book 1 specifikacia
+   book1.title  := 'Harry Potter a Kameň mudrcov'; 
+   book1.author := 'Joanne Jo Rowlingová';  
+   book1.subject := 'Fantasy Román'; 
+   book1.book_id := 1005123;  
+   -- Book 2 specifikacia 
+   book2.title := 'Harry Potter a Tajomná komnata'; 
+   book2.author := 'Joanne Jo Rowlingová'; 
+   book2.subject := 'Fantasy Román'; 
+   book2.book_id := 1005124;  
+  
+  -- Vypis book 1 zaznamu 
+   dbms_output.put_line('Book 1 title : '|| book1.title); 
+   dbms_output.put_line('Book 1 author : '|| book1.author); 
+   dbms_output.put_line('Book 1 subject : '|| book1.subject); 
+   dbms_output.put_line('Book 1 book_id : ' || book1.book_id); 
+   
+   -- Vypis book 2 zaznamu 
+   dbms_output.put_line('Book 2 title : '|| book2.title); 
+   dbms_output.put_line('Book 2 author : '|| book2.author); 
+   dbms_output.put_line('Book 2 subject : '|| book2.subject); 
+   dbms_output.put_line('Book 2 book_id : '|| book2.book_id); 
+END; 
+/
+```
