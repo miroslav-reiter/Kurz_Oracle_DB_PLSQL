@@ -5,20 +5,20 @@ Kurz PL/SQL ťa prevedie od nulových schopností písania PL/SQL po schopnosť 
 **Prihlasovacie údaje na kurze od lektora**    
 
 ### ☁️ Oracle Autonomous Database (Oracle Cloud Database)
-Username: admin
-Wallet: KurzOraclePLSQL.zip
-Configuration File: C:\Users\Administrator\Documents\Oracle Wallet\Wallet_KurzOraclePLSQL.zip
-Service: kurzoracleplsql_high (automaticky)
+Username: admin  
+Wallet: KurzOraclePLSQL.zip  
+Configuration File: C:\Users\Administrator\Documents\Oracle Wallet\Wallet_KurzOraclePLSQL.zip  
+Service: kurzoracleplsql_high (automaticky)  
 
-DB Name: KurzOraclePLSQL alebo F861DMQMREFDG3ZG
-URL Connection: ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a 
+DB Name: KurzOraclePLSQL alebo F861DMQMREFDG3ZG  
+URL Connection: ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a  
 
-### 📋 Samostatne nainštalované Oracle Express Database
+### 📋 Samostatne nainštalované Oracle Express Database  
 Username: sysdba alebo sysdba 
-Password: oracle alebo zadané pri inštalácií
-Hostname: localhost alebo 127.0.0.1
-Port: 1521
-SID: xe
+Password: oracle alebo zadané pri inštalácií  
+Hostname: localhost alebo 127.0.0.1  
+Port: 1521  
+SID: xe  
 
 ## 📁 Súbory na kurze od lektora  
 Registrujte sa na a vytvorte si **Oracle konto** pre používanie [Oracle Live SQL editora](https://livesql.oracle.com)
