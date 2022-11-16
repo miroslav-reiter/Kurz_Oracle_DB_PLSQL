@@ -102,17 +102,17 @@ Kompilačný a runtime systém PL/SQL je engine, ktorý kompiluje a spúšťa je
 
 ### Základná štruktúra anonymných blokov  
 **DECLARE**  
-	Deklaračná sekcia  
-	v_priezvisko varchar2(10):='Sangala';  
+    Deklaračná sekcia  
+    v_priezvisko varchar2(10):='Sangala';  
 **BEGIN**  
-	Výkonná/exekučná sekcia  
-	DBMS_OUTPUT.PUT_LINE(v_priezvisko);  
+    Výkonná/exekučná sekcia  
+    DBMS_OUTPUT.PUT_LINE(v_priezvisko);  
 **EXCEPTION**  
-	Ošetrenie výnimiek/chýb  
-	WHEN TOO_MANY_ROWS THEN  
-	DBMS_OUTPUT.PUT_LINE('SELECT vratil viacero riadkov');  
+    Ošetrenie výnimiek/chýb  
+    WHEN TOO_MANY_ROWS THEN  
+    DBMS_OUTPUT.PUT_LINE('SELECT vratil viacero riadkov');  
 **END**;  
-	Ukončenie bloku  
+    Ukončenie bloku  
 ![image](https://user-images.githubusercontent.com/24510943/202175394-f5fe2c65-2036-4a53-ba22-97390329bf92.png)
 
 ## 📦 Dátové Typy
