@@ -92,7 +92,7 @@ BINARY_DOUBLE zaberie 8 bytov a spracuje čísla od 2,2250748585072014E-308 do 1
 **SIMPLE_FLOAT** a **SIMPLE_DOUBLE** (od ver. 11g) je ich rýchlejšia alternatíva, ktorá ale nepodporuje NULL hodnoty, predikáty **IS NAN** a **IS INFINITY** a nekontroluje podmienkypretečenia
 
 ### 🎲 Číselné Dátové Typy (Celé)
-**PLS_INTEGER** ukladá celočíselné hodnoty (signed integer) od −2 147 483 648 do 2 147 483 647.  
+**PLS_INTEGER** ukladá celočíselné hodnoty (signed integer) od -2 147 483 648 do 2 147 483 647.  
 Hodnoty sú reprezentované natívnym integer formátom príslušnej hardvérovej platformy, celočíselné výpočty sa tak vykonávajú rýchlejšie ako pri dátovom type NUMBER. PLS_INTEGER je náhradou a ekvivalentom staršieho typu BINARY_INTEGER.  
 
 **SIMPLE_INTEGER** (od ver. 11g) je rýchlejšia alternatíva PLS_INTEGER, nepodporuje však NULL hodnoty a nekontroluje podmienky pretečenia. 
@@ -110,7 +110,7 @@ nazov_premennej TIMESTAMP [(precision)]
 ```sql
 nazov_premennej TIMESTAMP [(precision)] WITH TIME ZONE
 ```
-**TIMESTAMP WITH LOCAL TIMEZONE** ako TIMESTAMP, je však citlivý na rozdiely medzi  SESSION_TIMEZONE a DB_TIMEZONE. Informácie sa pri ukladaní na server prepočítavajú a uložia  v časovej zone databázy, naopak pri výbere sa prerátajú na časovú zónu session. 
+**TIMESTAMP WITH LOCAL TIMEZONE** ako TIMESTAMP, je však citlivý na rozdiely medzi SESSION_TIMEZONE a DB_TIMEZONE. Informácie sa pri ukladaní na server prepočítavajú a uložia  v časovej zone databázy, naopak pri výbere sa prerátajú na časovú zónu session. 
 ```sql
 nazov_premennej TIMESTAMP [(precision)] WITH LOCAL TIME ZONE
 ```
