@@ -79,20 +79,20 @@ V relačných DB častokrát nájdeme aspoň tieto 3:
 2. **FUNCTION** - zoskupenie dopytov, výsledkom je skalárna hodnota
 3. **TRIGGER** - špeciálna procedúra k určitým udalostiam/eventom ako je aktualizáciua, vymazanie, vytvorenie údajov.
 
-Oracle – **PL/SQL**
-Microsoft/Sybase – T–SQL
-MySQL – SQL/PSM (Persistent Stored Module)
-Sybase – Watcom–SQL
-PostgreSQL – PL/PSM
+Oracle – **PL/SQL**  
+Microsoft/Sybase – T–SQL  
+MySQL – SQL/PSM (Persistent Stored Module)  
+Sybase – Watcom–SQL  
+PostgreSQL – PL/PSM  
 
 #### Databázové Objekty
-Databáza/Schéma – zoskupenie objektov
-Tabuľka – štruktúrované zoskupenie dát
-Index – štruktúra dát zvyšujúca výkon a rýchlosť dopytov
-Avšak na úkor diskových operácií a diskového priestoru
-Procedúra, funkcia – sekvencia dopytov
-Pohľad – predpripravený dopyt
-Trigger – špeciálna procedúra – vkladanie, aktualizácia a mazanie
+Databáza/Schéma – zoskupenie objektov  
+Tabuľka – štruktúrované zoskupenie dát  
+Index – štruktúra dát zvyšujúca výkon a rýchlosť dopytov  
+Avšak na úkor diskových operácií a diskového priestoru  
+Procedúra, funkcia – sekvencia dopytov  
+Pohľad – predpripravený dopyt  
+Trigger – špeciálna procedúra – vkladanie, aktualizácia a mazanie  
 
 ## Architektúra PL/SQL
 PL/SQL compilation and run-time system (ďalej len CRTS) je technológia, nie nezávislý produkt. Predstavte si túto technológiu nasledovne. CRTS je engina, ktorá kompiluje a vykonáva PL/SQL bloky a podprogramy. Engina môže byť nainštalovaná buď v Oracle serveri alebo v application development tool, ako napr. v Oracle Forms alebo Oracle Report. Takže PL/SQL sídli v 2 prostrediach.
@@ -109,6 +109,7 @@ Kompilačný a runtime systém PL/SQL je engine, ktorý kompiluje a spúšťa je
 ![image](https://user-images.githubusercontent.com/24510943/202174430-44b8ddc5-64da-423b-965c-2e2b6109b64a.png)
 
 ## Výhody PL/SQL
+
 ![image](https://user-images.githubusercontent.com/24510943/202175645-037b0b41-802d-4d75-8e9a-afbcf25095ce.png)
 
 ### Základná štruktúra anonymných blokov  
@@ -124,6 +125,7 @@ Kompilačný a runtime systém PL/SQL je engine, ktorý kompiluje a spúšťa je
     DBMS_OUTPUT.PUT_LINE('SELECT vratil viacero riadkov');  
 **END**;  
     Ukončenie bloku  
+    
 ![image](https://user-images.githubusercontent.com/24510943/202175394-f5fe2c65-2036-4a53-ba22-97390329bf92.png)
 
 ## 📦 Dátové Typy
