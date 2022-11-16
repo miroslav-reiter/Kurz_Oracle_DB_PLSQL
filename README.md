@@ -40,6 +40,17 @@ Kto si bude chcieť okrem simulátorov vyskúšaj aj vlastné databázy a nad ni
 8. [HackerRank](https://www.hackerrank.com/domains/sql)  
 9. [SQL Fiddle](http://sqlfiddle.com/#!4/c0be1c/1)  
 
+
+## Šablóny Oracle SQL Developer (Code Template)
+```sql
+-- ssf SELECT FROM
+-- ii INSERT INTO
+-- df DELETE FROM
+-- ct CREATE TABLE
+-- cp CREATE PROCEDURE
+-- cf CREATE FUNCTION
+```
+
 Cesta, kde je uložený konfiguračný súbor **(product.conf)** SQL Developer:
 C:\Users\\**POUZIVATEL**\\AppData\Roaming\sqldeveloper\\**VASA_VERZIA**\\product.conf
 C:\Users\Administrator\AppData\Roaming\sqldeveloper\22.2.1\product.conf
