@@ -41,17 +41,19 @@ Kto si bude chcieť okrem simulátorov vyskúšaj aj vlastné databázy a nad ni
 9. [SQL Fiddle](http://sqlfiddle.com/#!4/c0be1c/1)  
 
 Cesta, kde je uložený konfiguračný súbor **(product.conf)** SQL Developer:
-C:\Users\**POUZIVATEL**\AppData\Roaming\sqldeveloper\**VASA_VERZIA**\product.conf
+C:\Users\\**POUZIVATEL**\\AppData\Roaming\sqldeveloper\\**VASA_VERZIA**\\product.conf
 C:\Users\Administrator\AppData\Roaming\sqldeveloper\22.2.1\product.conf
 
 Cesta, kde sú uložené SQL skripty DBeaver:
 C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 
-## 📔 Dokumentácia Oracle PL/SQL a Oracle Database
+## 📔 Dokumentácia Oracle PL/SQL a Oracle Database a Guidelines
 1. [Oracle Database 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
 2. [Oracle Database 19c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
 3. [Database PL/SQL Language Reference 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html)  
-4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)  
+4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)
+5. [Oracle SQL and PL/SQL Coding Guidelines]([https://databaseline.tech/guidelines.html](https://oracle.readthedocs.io/en/latest/sql/basics/style-guide.html) 
+6. [Ian Hellström Oracle SQL and PL/SQL Coding Guidelines](https://databaseline.tech/guidelines.html) 
 
 ## Čo je PL/SQL?
 **Procedurálne rozšírenie SQL od Oracle**
@@ -61,10 +63,10 @@ Je procedurálna nadstavba jazyka SQL firmy Oracle. Jazyk PL/SQL je pôvodne pro
 ### SQL jazyk – Rozšírenie o procedúry
 Každý DB systém ma vlastný druh rozšírenia
 
-V relačných DB častokrát nájdeme aspoň tieto 2:
-1. PROCEDURE – zoskupenie dopytov, výsledkom môže byť tabuľka
-2. FUNCTION – zoskupenie dopytov, výsledkom je skalárna hodnota
-3. Trigger - špeciálna procedúra k určitým udalostiam/eventom ako je aktualizáciua, vymazanie, vytvorenie údajov.
+V relačných DB častokrát nájdeme aspoň tieto 3:
+1. **PROCEDURE** - zoskupenie dopytov, výsledkom môže byť tabuľka
+2. **FUNCTION** - zoskupenie dopytov, výsledkom je skalárna hodnota
+3. **TRIGGER** - špeciálna procedúra k určitým udalostiam/eventom ako je aktualizáciua, vymazanie, vytvorenie údajov.
 
 Oracle – **PL/SQL**
 Microsoft/Sybase – T–SQL
@@ -206,9 +208,8 @@ Všetko ostatné vrátane funkcií, procedúry, triggerov, SQL príkazov do (\*.
 ## Packages (Balíčky)
 PL/SQL umožňuje zoskupiť logický príbuzné typy, premenné, kurzory a podprogramy do balíčkov. Balíčky majú obvykle 2 časti: **špecifikáciu** a **telo**. Špecifikácia je rozhranie/interface balíčka pre aplikáciu - deklaruje typy, konštanty, premenné, výnimky, kurzory a podprogramy, ktoré môžeme z balíčka využívať. Telo obsahuje definície kurzorov a podprogramov, takže implementuje špecifikáciu. Iba deklarácie v špecifikácii balíčkov sú viditeľné a prístupné z aplikácie. Implementačné detaily (v tele balíčka) sú skryté a neprístupné z aplikácie. Balíčky môžu byť skompilované a uložené v Oracle databáze, kde môžu byť zdieľané mnohými aplikáciami, keď voláte prvýkrát podprogram z balíčka, tak sa celý balíček načíta do pamäte. Pri ďalších volaniach už je balíček v pamäti a nevyžaduje teda ďalšie I/O operácie, čo priaznivo ovplyvňuje výkon.
 
-### Prečo používať Balíčky (Packages)?![image](https://user-images.githubusercontent.com/24510943/202175509-de9077bd-be01-45b6-ab1b-a46891806398.png)
-![image](https://user-images.githubusercontent.com/24510943/202175537-7e6bd3d0-380b-4d1b-972e-7bd216aca713.png)
-
+### Prečo používať Balíčky (Packages)?
+![image](https://user-images.githubusercontent.com/24510943/202182620-7fbb3f64-ed18-4b20-92a6-730df2840c3a.png)
 
 ```sql
 -- Tabulka pre logovanie
