@@ -53,6 +53,65 @@ C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 3. [Database PL/SQL Language Reference 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html)  
 4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)  
 
+## Čo je PL/SQL?
+**Procedurálne rozšírenie SQL od Oracle**
+Je procedurálna nadstavba jazyka SQL firmy Oracle. Jazyk PL/SQL je pôvodne procedurálny, dnes má však niektoré prvky a možnosti OOP. Na rozdiel od SQL umožňuje používať cykly, podmienky, procedúry, funkcie, ošetrenie výnimiek a iné programátorské postupy.
+![image](https://user-images.githubusercontent.com/24510943/202174834-c7da6809-0378-4dc9-80fa-e23eacb96125.png)
+
+### SQL jazyk – Rozšírenie o procedúry
+Každý DB systém ma vlastný druh rozšírenia
+
+V relačných DB častokrát nájdeme aspoň tieto 2:
+1. PROCEDURE – zoskupenie dopytov, výsledkom môže byť tabuľka
+2. FUNCTION – zoskupenie dopytov, výsledkom je skalárna hodnota
+3. Trigger - špeciálna procedúra k určitým udalostiam/eventom ako je aktualizáciua, vymazanie, vytvorenie údajov.
+
+Oracle – **PL/SQL**
+Microsoft/Sybase – T–SQL
+MySQL – SQL/PSM (Persistent Stored Module)
+Sybase – Watcom–SQL
+PostgreSQL – PL/PSM
+
+#### Databázové Objekty
+Databáza/Schéma – zoskupenie objektov
+Tabuľka – štruktúrované zoskupenie dát
+Index – štruktúra dát zvyšujúca výkon a rýchlosť dopytov
+Avšak na úkor diskových operácií a diskového priestoru
+Procedúra, funkcia – sekvencia dopytov
+Pohľad – predpripravený dopyt
+Trigger – špeciálna procedúra – vkladanie, aktualizácia a mazanie
+
+## Architektúra PL/SQL
+PL/SQL compilation and run-time system (ďalej len CRTS) je technológia, nie nezávislý produkt. Predstavte si túto technológiu nasledovne. CRTS je engina, ktorá kompiluje a vykonáva PL/SQL bloky a podprogramy. Engina môže byť nainštalovaná buď v Oracle serveri alebo v application development tool, ako napr. v Oracle Forms alebo Oracle Report. Takže PL/SQL sídli v 2 prostrediach.
+
+- Databázový server Oracle
+- Oracle tools
+
+Tieto dve prostredia sú nezávislé.
+
+V oboch prostrediach PL/SQL engina prijme ako vstup ľubovoľný platný PL/SQL blok alebo podprogram a vykoná ho tak, že vykoná procedurálne príkazy/statementy v bloku alebo podprograme, ale SQL statementy pošle SQL Statement Executorovi v databázovom serveri Oracle.
+
+Kompilačný a runtime systém PL/SQL je engine, ktorý kompiluje a spúšťa jednotky PL/SQL Engine je možné nainštalovať do databázy alebo do nástroja na vývoj aplikácií, ako je napríklad Oracle Forms. V oboch prostrediach engine PL/SQL akceptuje ako vstup akúkoľvek platnú jednotku PL/SQL. Engine spúšťa procedurálne príkazy, ale odosiela príkazy SQL do nástroja SQL v databáze. Databáza zvyčajne spracováva jednotky PL/SQL. Keď nástroj na vývoj aplikácií spracuje jednotky PL/SQL, odovzdá ich svojmu lokálnemu jadru PL/SQL. Ak jednotka PL/SQL neobsahuje žiadne príkazy SQL, lokálny mechanizmus spracuje celú jednotku PL/SQL. Je to užitočné, ak nástroj na vývoj aplikácií môže ťažiť z podmieneného a iteračného riadenia. Napríklad aplikácie Oracle Forms často používajú príkazy SQL na testovanie hodnôt položiek polí a vykonávanie jednoduchých výpočtov. Použitím PL/SQL namiesto SQL sa tieto aplikácie môžu vyhnúť volaniam do databázy.
+![image](https://user-images.githubusercontent.com/24510943/202174430-44b8ddc5-64da-423b-965c-2e2b6109b64a.png)
+
+## Výhody PL/SQL
+![image](https://user-images.githubusercontent.com/24510943/202175645-037b0b41-802d-4d75-8e9a-afbcf25095ce.png)
+
+### Základná štruktúra anonymných blokov
+**DECLARE**
+	Deklaračná sekcia
+	v_priezvisko varchar2(10):='Sangala'
+**BEGIN**
+	Výkonná/exekučná sekcia
+	DBMS_OUTPUT.PUT_LINE(v_priezvisko); 
+**EXCEPTION**
+	Ošetrenie výnimiek/chýb
+	WHEN TOO_MANY_ROWS THEN
+	DBMS_OUTPUT.PUT_LINE('SELECT vratil viacero riadkov');
+**END**;
+	Ukončenie bloku
+![image](https://user-images.githubusercontent.com/24510943/202175394-f5fe2c65-2036-4a53-ba22-97390329bf92.png)
+
 ## 📦 Dátové Typy
 ### 🎰 Znakové Dátové Typy
 **VARCHAR2** uchováva reťazce s premenlivou dĺžkou. Pri deklarácii premennej treba zadať jej maximálnu dĺžku (1 – 32 767 bytov).   
@@ -140,6 +199,76 @@ nazov_premennej TIMESTAMP [(precision)] WITH LOCAL TIME ZONE
 5. SQL skripty oddelené / (tvorba/odstránenie tabuliek, reláci a pod.) (\*.sql)
 
 ### Odporúčanie:
-Špecifikácia balíčka do (\*.pks)
-Telo/implementácia balíčka do (\*.pkb)
-Všetko ostatné vrátane funkcií, procedúry, triggerov, SQL príkazov do (\*.sql)
+Špecifikácia balíčka do (\*.pks)  
+Telo/implementácia balíčka do (\*.pkb)  
+Všetko ostatné vrátane funkcií, procedúry, triggerov, SQL príkazov do (\*.sql)  
+
+## Packages (Balíčky)
+PL/SQL umožňuje zoskupiť logický príbuzné typy, premenné, kurzory a podprogramy do balíčkov. Balíčky majú obvykle 2 časti: **špecifikáciu** a **telo**. Špecifikácia je rozhranie/interface balíčka pre aplikáciu - deklaruje typy, konštanty, premenné, výnimky, kurzory a podprogramy, ktoré môžeme z balíčka využívať. Telo obsahuje definície kurzorov a podprogramov, takže implementuje špecifikáciu. Iba deklarácie v špecifikácii balíčkov sú viditeľné a prístupné z aplikácie. Implementačné detaily (v tele balíčka) sú skryté a neprístupné z aplikácie. Balíčky môžu byť skompilované a uložené v Oracle databáze, kde môžu byť zdieľané mnohými aplikáciami, keď voláte prvýkrát podprogram z balíčka, tak sa celý balíček načíta do pamäte. Pri ďalších volaniach už je balíček v pamäti a nevyžaduje teda ďalšie I/O operácie, čo priaznivo ovplyvňuje výkon.
+
+### Prečo používať Balíčky (Packages)?![image](https://user-images.githubusercontent.com/24510943/202175509-de9077bd-be01-45b6-ab1b-a46891806398.png)
+![image](https://user-images.githubusercontent.com/24510943/202175537-7e6bd3d0-380b-4d1b-972e-7bd216aca713.png)
+
+
+```sql
+-- Tabulka pre logovanie
+create table log_table
+( message varchar2(200)
+)
+//
+
+-- Vytvor špecifikáciu balíčka
+create or replace package pkg_test
+is
+    -- Definícia 1 verejnej/public procedúry
+    procedure do;
+end;
+//
+
+-- Vytvor telo balíčka
+create or replace package body pkg_test
+is
+    -- Privátna/súkromná logovacia procedúra
+    procedure log(p_message in varchar)
+    is
+    begin
+        insert into log_table(message) values (p_message);
+    end;
+
+    -- Privátna/súkromná, ktorá vráti na výstupe dvojnásobné číslo
+    function double(p_number in number)
+    return number
+    is
+    begin
+        return 2 * p_number;
+    end;
+
+    -- Použitie verejnej/public procedúry
+    procedure do
+    is
+    begin
+        log('2 * 12 = ' || double(12));
+    end;
+
+end;
+//
+
+```
+### Spustenie príslušnej verejnej procedúry a balíka
+```sql
+-- Vykonanie verejnej/public procedúry balíka
+begin
+    pkg_test.do;
+end;
+/
+
+-- dbms_output nefunguje, takže sa lognene do tabuľky
+-- (podobne ako v skutočnom živote) a vyberiete z neho všetky záznamy
+select *
+from   log_table
+/
+
+```
+## Záznamy (Records)
+
+Record je skupina dátových položiek uložená v poliach, každé má svoje meno a datatype. Atribút %ROWTYPE dovoľuje deklarovať recordy, ktoré zodpovedajú riadku databázovej tabuľky. Avšak tak nemôžete určiť datatypy políčok recordu, alebo ich sami definovať. Takýto record je presný obraz datatypu databázovej tabuľky. Preto existuje datatype RECORD, ktorý toto obmedzenie ruší.
