@@ -1,5 +1,5 @@
 # 📋 Kurz Oracle DB PL/SQL
-Kurz PL/SQL ťa prevedie od nulových schopností písania PL/SQL po schopnosť písať efektívne programy na spracovanie údajov. V kurze sa naučíš popísať vlastnosti a syntax PL/SQL. Vytvárať a ladiť uložené procedúry a funkcie. PL/SQL je rozšírenie procedurálneho jazyka Oracle. SQL. Program PL/SQL môže mať príkazy SQL aj procedurálne príkazy. V programe PL/SQL sa príkazy SQL používajú na prístup k súborom údajov uloženým v databáze, zatiaľ čo procedurálne príkazy sa používajú na spracovanie jednotlivých údajov a riadenie toku programu.
+Kurz PL/SQL ťa prevedie od nulových schopností písania PL/SQL po schopnosť písať efektívne programy na spracovanie údajov. V kurze sa naučíš popísať vlastnosti a syntax PL/SQL. Vytvárať a ladiť uložené procedúry a funkcie. PL/SQL je rozšírenie procedurálneho jazyka Oracle SQL. Program PL/SQL môže mať príkazy SQL aj procedurálne príkazy. V programe PL/SQL sa príkazy SQL používajú na prístup k súborom údajov uloženým v databáze, zatiaľ čo procedurálne príkazy sa používajú na spracovanie jednotlivých údajov a riadenie toku programu.
 
 ## 🧱 Testovacia Oracle DB 
 **Prihlasovacie údaje na kurze od lektora**    
