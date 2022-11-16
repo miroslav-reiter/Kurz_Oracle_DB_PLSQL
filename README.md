@@ -40,12 +40,18 @@ Kto si bude chcieť okrem simulátorov vyskúšaj aj vlastné databázy a nad ni
 8. [HackerRank](https://www.hackerrank.com/domains/sql)  
 9. [SQL Fiddle](http://sqlfiddle.com/#!4/c0be1c/1)  
 
-Cesta, kde sú uložené SQL skripty DBeaver
+Cesta, kde je uložený konfiguračný súbor **(product.conf)** SQL Developer:
+C:\Users\**POUZIVATEL**\AppData\Roaming\sqldeveloper\**VASA_VERZIA**\product.conf
+C:\Users\Administrator\AppData\Roaming\sqldeveloper\22.2.1\product.conf
+
+Cesta, kde sú uložené SQL skripty DBeaver:
 C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 
-## 📔 Dokumentácia
-https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html
-https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html
+## 📔 Dokumentácia Oracle PL/SQL a Oracle Database
+1. [Oracle Database 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
+2. [Oracle Database 19c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
+3. [Database PL/SQL Language Reference 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html)  
+4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)  
 
 ## 📦 Dátové Typy
 ### 🎰 Znakové Dátové Typy
