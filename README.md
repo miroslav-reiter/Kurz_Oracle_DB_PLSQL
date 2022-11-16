@@ -131,4 +131,15 @@ nazov_premennej TIMESTAMP [(precision)] WITH LOCAL TIME ZONE
 **BLOB** odkaz na veľký binárny objekt uložený v databáze   
 **BFILE** odkaz na veľký binárny objekt uložený mimo databázy  
 
+## Rozšírenia (prípony) súborv Oracle PL/SQL
+1. Functions (\*.pls)
+2. Procedures (\*.pls)
+3. Package Specification (\*.pks)
+4. Package Body (\*.pkb)
+5. Trigger (\*.trg)
+5. SQL skripty oddelené / (tvorba/odstránenie tabuliek, reláci a pod.) (\*.sql)
 
+### Odporúčanie:
+Špecifikácia balíčka do (\*.pks)
+Telo/implementácia balíčka do (\*.pkb)
+Všetko ostatné vrátane funkcií, procedúry, triggerov, SQL príkazov do (\*.sql)
