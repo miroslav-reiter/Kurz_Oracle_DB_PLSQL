@@ -274,3 +274,18 @@ from   log_table
 ## Záznamy (Records)
 
 Record je skupina dátových položiek uložená v poliach, každé má svoje meno a datatype. Atribút %ROWTYPE dovoľuje deklarovať recordy, ktoré zodpovedajú riadku databázovej tabuľky. Avšak tak nemôžete určiť datatypy políčok recordu, alebo ich sami definovať. Takýto record je presný obraz datatypu databázovej tabuľky. Preto existuje datatype RECORD, ktorý toto obmedzenie ruší.
+
+```sql
+DECLARE 
+   customer_rec customers%rowtype; 
+BEGIN 
+   SELECT * into customer_rec 
+   FROM customers 
+   WHERE id = 5;  
+   dbms_output.put_line('Zakaznik ID: ' || customer_rec.id); 
+   dbms_output.put_line('Zakaznik meno: ' || customer_rec.name); 
+   dbms_output.put_line('Zakaznik adresa: ' || customer_rec.address); 
+   dbms_output.put_line('Zakaznik mzda: ' || customer_rec.salary); 
+END; 
+```
+/
