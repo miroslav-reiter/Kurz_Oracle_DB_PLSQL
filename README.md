@@ -52,7 +52,7 @@ C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 2. [Oracle Database 19c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
 3. [Database PL/SQL Language Reference 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html)  
 4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)
-5. [Oracle SQL and PL/SQL Coding Guidelines]([https://databaseline.tech/guidelines.html](https://oracle.readthedocs.io/en/latest/sql/basics/style-guide.html) 
+5. [Oracle SQL and PL/SQL Coding Guidelines](https://databaseline.tech/guidelines.html](https://oracle.readthedocs.io/en/latest/sql/basics/style-guide.html) 
 6. [Ian Hellström Oracle SQL and PL/SQL Coding Guidelines](https://databaseline.tech/guidelines.html) 
 
 ## Čo je PL/SQL?
