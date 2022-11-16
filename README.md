@@ -1,20 +1,30 @@
-# 📋 Kurz_Oracle_DB_PLSQL
-Materiály ku kurzu Oracle DB PL/SQL  
+# 📋 Kurz Oracle DB PL/SQL
+Kurz PL/SQL ťa prevedie od nulových schopností písania PL/SQL po schopnosť písať efektívne programy na spracovanie údajov. V kurze sa naučíš popísať vlastnosti a syntax PL/SQL. Vytvárať a ladiť uložené procedúry a funkcie. PL/SQL je rozšírenie procedurálneho jazyka Oracle. SQL. Program PL/SQL môže mať príkazy SQL aj procedurálne príkazy. V programe PL/SQL sa príkazy SQL používajú na prístup k súborom údajov uloženým v databáze, zatiaľ čo procedurálne príkazy sa používajú na spracovanie jednotlivých údajov a riadenie toku programu.
 
 ## 🧱 Testovacia Oracle DB 
-Prihlasovacie údaje na kurze od lektora    
-DB Name: KurzOraclePLSQL    
-Password: Oracle-je-super-2022    
+**Prihlasovacie údaje na kurze od lektora**    
 
-Database name: F861DMQMREFDG3ZG  
-Wallet: IT-academy-456...  
-ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a  
+### ☁️ Oracle Autonomous Database (Oracle Cloud Database)
+Username: admin
+Wallet: KurzOraclePLSQL.zip
+Configuration File: C:\Users\Administrator\Documents\Oracle Wallet\Wallet_KurzOraclePLSQL.zip
+Service: kurzoracleplsql_high (automaticky)
+
+DB Name: KurzOraclePLSQL alebo F861DMQMREFDG3ZG
+URL Connection: ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a 
+
+### 📋 Samostatne nainštalované Oracle Express Database
+Username: sysdba alebo sysdba 
+Password: oracle alebo zadané pri inštalácií
+Hostname: localhost alebo 127.0.0.1
+Port: 1521
+SID: xe
 
 ## 📁 Súbory na kurze od lektora  
-Registrujte sa na a vytvorte si konto na: https://livesql.oracle.com
+Registrujte sa na a vytvorte si **Oracle konto** pre používanie [Oracle Live SQL editora](https://livesql.oracle.com)
 Kto si bude chcieť okrem simulátorov vyskúšaj aj vlastné databázy a nad nimi písanie skriptov, nainštalujte si:
-1. Oracle XE (free Database)
-2. SQL Developer
+1. [Oracle XE Express (free Database)](https://www.oracle.com/database/technologies/appdev/xe.html) 
+2. [SQL Developer](https://www.oracle.com/database/sqldeveloper/) 
 Dostupné na: https://vitask-my.sharepoint.com/:f:/g/personal/miroslav_vitask_onmicrosoft_com/ErD-ruCODExDnWXA1heKXhABKiTSIi4BC90Bw7QUow17vg?e=j3MsER  
 
 ## 🧰 Stránky a nástroje na precvičovanie Oracle DB a PL/SQL
