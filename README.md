@@ -1,5 +1,9 @@
 # 📋 Kurz Oracle DB PL/SQL
-Kurz PL/SQL ťa prevedie od nulových schopností písania PL/SQL po schopnosť písať efektívne programy na spracovanie údajov. V kurze sa naučíš popísať vlastnosti a syntax PL/SQL. Vytvárať a ladiť uložené procedúry a funkcie. PL/SQL je rozšírenie procedurálneho jazyka Oracle SQL. Program PL/SQL môže mať príkazy SQL aj procedurálne príkazy. V programe PL/SQL sa príkazy SQL používajú na prístup k súborom údajov uloženým v databáze, zatiaľ čo procedurálne príkazy sa používajú na spracovanie jednotlivých údajov a riadenie toku programu.
+[Kurz PL/SQL](https://www.it-academy.sk/kurz/oracle-plsql-i-zaciatocnik/) ťa prevedie od nulových schopností písania PL/SQL po schopnosť písať efektívne programy na spracovanie údajov. V kurze sa naučíš popísať vlastnosti a syntax PL/SQL. Vytvárať a ladiť uložené procedúry a funkcie. PL/SQL je rozšírenie procedurálneho jazyka Oracle SQL. Program PL/SQL môže mať príkazy SQL aj procedurálne príkazy. V programe PL/SQL sa príkazy SQL používajú na prístup k súborom údajov uloženým v databáze, zatiaľ čo procedurálne príkazy sa používajú na spracovanie jednotlivých údajov a riadenie toku programu.
+
+## ⚓ Odkazy na kurzy
+[Kurzy Oracle](https://www.it-academy.sk/kategoria/databazy/kurzy-oracle/)  
+[Kurz Oracle PL/SQL I. Začiatočník](https://www.it-academy.sk/kurz/oracle-plsql-i-zaciatocnik/)  
 
 ## 🧱 Testovacia Oracle DB 
 **Prihlasovacie údaje na kurze od lektora**    
@@ -125,6 +129,57 @@ Kompilačný a runtime systém PL/SQL je engine, ktorý kompiluje a spúšťa je
     Ukončenie bloku  
     
 ![image](https://user-images.githubusercontent.com/24510943/202175394-f5fe2c65-2036-4a53-ba22-97390329bf92.png)
+
+## Príklady PL-SQL Ahoj Svet (Hello World)
+```sql
+BEGIN
+ -- Najkratsi Ahoj Svet/Hello World skript
+	-- Nazov balicka/package.procedura/funkcia 
+	-- package dbms_output umožňuje odosielať správy z uložených procedúr, balíkov a spúšťačov/triggerov. Balík je užitočný najmä na zobrazenie informácií o ladení/debuggovani PL/SQL.
+    dbms_output.put_line('Ahoj Svet');
+END;
+/
+```
+```sql
+REM Kurz_PL_SQL_I-D1_01_Ahoj_Svet
+
+DECLARE 
+ -- Deklaracia premennych 
+ sprava varchar(10):='Ahoj svet'; 
+BEGIN 
+ /* 
+    PL/SQL spustitelne prikazy 
+    put, put_line (odriadkuje) 
+ */ 
+ dbms_output.put_line('Hello World'); 
+ dbms_output.put_line(sprava); 
+-- EXCEPTION 
+-- Spracovanie vynimiek/chyb 
+END; 
+/
+```
+
+## Formatovanie Výstupov
+```sql
+/*
+    Microsoft Windows - Concatenate CR a LF: chr(13)||chr(10)
+    Linux, Mac: chr(10)
+    dbms_output.put_line('Hello World' || chr(13) || chr(10)); 
+*/
+
+BEGIN
+	DBMS_OUTPUT.PUT('1. riadok (put)... ');
+	DBMS_OUTPUT.PUT('stale 1. riadok (put)...');
+	DBMS_OUTPUT.NEW_LINE;
+	DBMS_OUTPUT.PUT_LINE('2. riadok (new_line + put_line)...');
+	DBMS_OUTPUT.PUT('3. riadok TEST');
+	DBMS_OUTPUT.NEW_LINE;
+	DBMS_OUTPUT.PUT_LINE('4. riadok' || CHR(10) || '5. riadok priklad LF (chr10)');
+	DBMS_OUTPUT.PUT_LINE(CHR(10));
+	DBMS_OUTPUT.PUT_LINE('9. riadok');
+END;
+/
+```
 
 ## 📦 Dátové Typy
 ### 🎰 Znakové Dátové Typy
