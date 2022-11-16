@@ -62,8 +62,8 @@ C:\Users\User\AppData\Roaming\DBeaverData\workspace6\General
 1. [Oracle Database 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
 2. [Oracle Database 19c](https://docs.oracle.com/en/database/oracle/oracle-database/21/lnpls/index.html)
 3. [Database PL/SQL Language Reference 21c](https://docs.oracle.com/en/database/oracle/oracle-database/21/development.html)  
-4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)
-5. [Oracle SQL and PL/SQL Coding Guidelines](https://databaseline.tech/guidelines.html](https://oracle.readthedocs.io/en/latest/sql/basics/style-guide.html) 
+4. [Database PL/SQL Language Reference 19c](https://docs.oracle.com/en/database/oracle/oracle-database/19/development.html)  
+5. [Oracle SQL and PL/SQL Coding Guidelines](https://oracle.readthedocs.io/en/latest/sql/basics/style-guide.html)   
 6. [Ian Hellström Oracle SQL and PL/SQL Coding Guidelines](https://databaseline.tech/guidelines.html) 
 
 ## Čo je PL/SQL?
@@ -100,9 +100,7 @@ PL/SQL compilation and run-time system (ďalej len CRTS) je technológia, nie ne
 - Databázový server Oracle
 - Oracle tools
 
-Tieto dve prostredia sú nezávislé.
-
-V oboch prostrediach PL/SQL engina prijme ako vstup ľubovoľný platný PL/SQL blok alebo podprogram a vykoná ho tak, že vykoná procedurálne príkazy/statementy v bloku alebo podprograme, ale SQL statementy pošle SQL Statement Executorovi v databázovom serveri Oracle.
+Tieto dve prostredia sú nezávislé.mV oboch prostrediach PL/SQL engina prijme ako vstup ľubovoľný platný PL/SQL blok alebo podprogram a vykoná ho tak, že vykoná procedurálne príkazy/statementy v bloku alebo podprograme, ale SQL statementy pošle SQL Statement Executorovi v databázovom serveri Oracle.
 
 Kompilačný a runtime systém PL/SQL je engine, ktorý kompiluje a spúšťa jednotky PL/SQL Engine je možné nainštalovať do databázy alebo do nástroja na vývoj aplikácií, ako je napríklad Oracle Forms. V oboch prostrediach engine PL/SQL akceptuje ako vstup akúkoľvek platnú jednotku PL/SQL. Engine spúšťa procedurálne príkazy, ale odosiela príkazy SQL do nástroja SQL v databáze. Databáza zvyčajne spracováva jednotky PL/SQL. Keď nástroj na vývoj aplikácií spracuje jednotky PL/SQL, odovzdá ich svojmu lokálnemu jadru PL/SQL. Ak jednotka PL/SQL neobsahuje žiadne príkazy SQL, lokálny mechanizmus spracuje celú jednotku PL/SQL. Je to užitočné, ak nástroj na vývoj aplikácií môže ťažiť z podmieneného a iteračného riadenia. Napríklad aplikácie Oracle Forms často používajú príkazy SQL na testovanie hodnôt položiek polí a vykonávanie jednoduchých výpočtov. Použitím PL/SQL namiesto SQL sa tieto aplikácie môžu vyhnúť volaniam do databázy.  
 
