@@ -287,5 +287,6 @@ BEGIN
    dbms_output.put_line('Zakaznik adresa: ' || customer_rec.address); 
    dbms_output.put_line('Zakaznik mzda: ' || customer_rec.salary); 
 END; 
-```
 /
+```
+
