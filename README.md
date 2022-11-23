@@ -17,7 +17,7 @@ Service: kurzoracleplsql_high (automaticky)
 DB Name: KurzOraclePLSQL alebo F861DMQMREFDG3ZG  
 URL Connection: ocid1.autonomousdatabase.oc1.eu-frankfurt-1.antheljtabxkwpiangbzg7rars3ru375p3nm3gsayo3qxmoqv6nce4zidj2a  
 
-### 📋 Samostatne nainštalovan8 databáza Oracle Express Database  
+### 📋 Samostatne nainštalovaná databáza Oracle Express Database  
 Username: sysdba alebo sysdba 
 Password: oracle alebo zadané pri inštalácií  
 Hostname: localhost alebo 127.0.0.1  
